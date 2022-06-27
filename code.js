@@ -64,10 +64,6 @@
 		// ~ ~ ~ SHADOW ~ ~ ~ 
 
 		new Achievement("Demigod complex", "Name yourself <b>Dragon</b>.<q>Have you made this mod?.</q>", [2, 12], 1), Game.last.pool = "shadow",
-		new Achievement("I like playing supportive characters", "Dashnet reached <b>10</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
-		new Achievement("That's a lot of money", "Dashnet reached <b>25</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
-		new Achievement("You really want us to make games for you, huh?", "Dashnet reached <b>50</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
-		new Achievement("Thank you guys so much!", "Dashnet reached <b>100</b> heralds.", [21, 29], 1), Game.last.pool = "shadow",
 	])
 
 	//-------------------------------------------------------------------
@@ -84,10 +80,6 @@
 	Achievements["Grade up"].order = 6002
 
 	Achievements["Demigod complex"].order = 30202
-	Achievements["I like playing supportive characters"].order = 6003
-	Achievements["That's a lot of money"].order = 6004
-	Achievements["You really want us to make games for you, huh?"].order = 6005
-	Achievements["Thank you guys so much!"].order = 6006
 
 	Object.values(Achievements).forEach(achievement => {
 		Game.AchievementsById[achievement.id] = achievement
@@ -118,14 +110,11 @@
 
 		function () { if (getTotalBuildings() >= 4000) Win("Build up") },
 		function () { if (getTotalBuildings() >= 8000) Win("You built the guilt") },
+		
 		function () { if (Game.UpgradesOwned >= 300) Win("Purchaser of Upgrades") },
 		function () { if (Game.UpgradesOwned >= 400) Win("Grade up") },	
 
 		function () { if (name == "Dragon") Win("Demigod complex") },
-		function () { if (Game.heralds >= 10) Win("I like playing supportive characters") },
-		function () { if (Game.heralds >= 25) Win("That's a lot of money") },
-		function () { if (Game.heralds >= 50) Win("You really want us to make games for you, huh?") },
-		function () { if (Game.heralds >= 100) Win("Thank you guys so much!") },
 	])
 
 	//-------------------------------------------------------------------
@@ -207,6 +196,6 @@
 	//-------------------------------------------------------------------
 
 	Game.Win("Third-party")
-	Game.Notify("Dragon's Achievements Alpha", " <b>9</b> new Achievements have been added, enjoy and thank you for using my mod!", [17, 26, "https://i.imgur.com/3jNJJNw.png"]);
+	Game.Notify("Dragon's Achievements Alpha", " <b>5</b> new Achievements have been added, enjoy and thank you for using my mod!", [17, 26, "https://i.imgur.com/3jNJJNw.png"]);
 	PlaySound("https://freesound.org/data/previews/203/203121_777645-lq.mp3");
 }
