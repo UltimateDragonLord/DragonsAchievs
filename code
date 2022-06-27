@@ -1,0 +1,38 @@
+{
+	/*
+	let Game = {
+		crate: () => { },
+		crateTooltip: () => { },
+		Achievement: class { construction() { Game.Achievements.push({ "order": 0 }) } },
+		hasAchievement: () => { },
+		Win: class { },
+		last: {},
+		Achievements: []
+	}*/
+
+	let Achievement = function Achievement(name, desc, icon) {
+		let answer = new Game.Achievement(name, desc, icon);
+
+		answer.dragon = 1;
+
+		return answer;
+	}
+
+	let Win = function Win(what) {
+		Game.Win(what);
+		if (typeof Game.Achievements[what] !== "undefined" && Game.Achievements[what].darky == 1) {
+			DarkySave.Achievements[what] = 1;
+			DarkyAchievSaveConfig();
+		}
+	}
+	
+	eval("Game.crate =" + Game.crate.toString().split("shadow';").join(" shadow';\nif (me.darky == 1) classes+=' darky'; //Darky's achievement package injection").split("mysterious?").join("mysterious? (me.darky == 1) ? 'background-image:url(\\\'https://i.imgur.com/JKKvixm.png\\\')'/*Darky's achievement package injection*/ : "));
+
+	eval("Game.crateTooltip = " + Game.crateTooltip.toString().split("if (mysterious) icon=[0,7];").join("if (mysterious) icon=[0,7]; if (mysterious && me.darky == 1) icon = [0, 0, 'https://i.imgur.com/JKKvixm.png']"));
+
+	if (typeof Darky === 'undefined') {
+		let style = document.createElement("style");
+		style.type = "text/css";
+		style.textContent = ".darky:before{background:url(https://i.imgur.com/q8nNdkI.png);background-position:120px 0px;}";
+		document.head.appendChild(style);
+	}
